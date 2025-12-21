@@ -1,0 +1,111 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="login.css" />
+    <script
+      src="https://kit.fontawesome.com/a69f428c24.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section
+      class="sec1 d-flex flex-column justify-content-center align-items-center"
+    >
+      <div
+        class="div1a d-flex flex-column justify-content-center align-items-center gap-4 px-5 py-3 rounded-4 text-center"
+      >
+        <div
+          class="d-flex flex-column justify-content-center align-items-center gap-3"
+        >
+          <h1 class="heading1 fw-bold">
+            ChatApp<i class="fa-solid fa-comment"></i>
+          </h1>
+          <h2 class="heading1 fw-semi-bold">Log in to ChatApp</h2>
+          <p
+            id="error"
+            class="text-danger m-0 error px-4 py-1 fs-6 fw-semi-bold rounded-2"
+          >
+            <i class="fa-solid fa-triangle-exclamation text-danger"></i> Please
+            fill in all inputs!
+          </p>
+          <p
+            id="error2"
+            class="text-danger m-0 error px-4 py-1 fs-6 fw-semi-bold rounded-2"
+          >
+            <i class="fa-solid fa-triangle-exclamation text-danger"></i
+            >Incorrect email or password
+          </p>
+          <input
+            name=""
+            id="email"
+            placeholder="Username or email"
+            class="justify-content-start align-items-center text-center rounded-3 py-1"
+          />
+          <input
+            type="password"
+            name=""
+            id="password"
+            placeholder="Password"
+            class="justify-content-start align-items-center text-center rounded-3 py-1"
+          />
+          <button
+            class="buttons px-lg-5 py-1 rounded-3 fw-semi-bold"
+            onclick="login()"
+          >
+            Continue
+          </button>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+          <strong>OR</strong>
+        </div>
+        <div
+          class="d-flex flex-column justify-content-center align-items-center gap-2"
+        >
+          <div
+            class="d-flex flex-column justify-content-center align-items-center gap-3"
+          >
+            <button
+              class="social-btn px-5 py-1 rounded-3 fw-semi-bold"
+              onclick="logIn()"
+            >
+              Continue with Google
+            </button>
+            <button
+              class="social-btn px-5 py-1 rounded-3 fw-semi-bold"
+              onclick="gitLogIn()"
+            >
+              Continue with GitHub
+            </button>
+          </div>
+          <div
+            class="d-flex flex-column justify-content-center align-items-center gap-2"
+          >
+            <p class="m-0">Don't have an account?</p>
+            <button
+              class="buttons py-1 px-3 border fs-5 rounded-5 bg-transparent text-dark fw-semi-bold"
+              onclick="signUp()"
+            >
+              Sign Up
+            </button>
+            <p class="fs-6 fw-lighter m-0">Forgot password?</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="./login.js"></script>
+  </body>
+</html>

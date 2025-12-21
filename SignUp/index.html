@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <title>SignUp</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="signUp.css" />
+    <script
+      src="https://kit.fontawesome.com/a69f428c24.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="d-flex flex-column min-vh-100 bg-light">
+    <div class="container flex-grow-1 flex-shrink-0 py-5">
+      <div
+        class="mb-5 p-4 bg-white shadow-sm sec1 bg-light d-flex flex-column gap-5 rounded-3"
+      >
+        <h3 class="text-white text-center">
+          Welcome to ChatApp<i class="fa-solid fa-comment"></i>
+        </h3>
+        <div id="stepper1" class="bs-stepper">
+          <div
+            class="bs-stepper-header d-flex gap-5 justify-content-around align-items-center"
+            role="tablist"
+          >
+            <div class="step" data-target="#test-l-1">
+              <button
+                type="button"
+                class="step-trigger social-btn text-white py-1 px-3 rounded-2 border emailColor box-shadow"
+                role="tab"
+                id="stepper1trigger1"
+                aria-controls="test-l-1"
+              >
+                <span
+                  class="bs-stepper-circle border rounded-circle px-2 bg-light text fw-bold"
+                  >1</span
+                >
+                <span class="bs-stepper-label">Email</span>
+              </button>
+            </div>
+            <div class="bs-stepper-line"></div>
+            <div class="step">
+              <button
+                type="button"
+                class="step-trigger social-btn text-white py-1 px-3 rounded-2 border box-shadow"
+                role="tab"
+                id="userNameBg"
+              >
+                <span
+                  class="bs-stepper-circle border rounded-circle px-2 bg-light text fw-bold"
+                  >2</span
+                >
+                <span class="bs-stepper-label">Username</span>
+              </button>
+            </div>
+            <div class="bs-stepper-line"></div>
+            <div class="step" data-target="#test-l-2">
+              <button
+                type="button"
+                class="step-trigger social-btn text-white py-1 px-3 rounded-2 border box-shadow"
+                role="tab"
+                id="stepper1trigger2"
+                aria-controls="test-l-2"
+              >
+                <span
+                  class="bs-stepper-circle border rounded-circle px-2 bg-light text fw-bold"
+                  >3</span
+                >
+                <span class="bs-stepper-label">Password</span>
+              </button>
+            </div>
+            <div class="bs-stepper-line"></div>
+            <div class="step" data-target="#test-l-3">
+              <button
+                type="button"
+                class="step-trigger social-btn text-white py-1 px-3 rounded-2 border box-shadow"
+                role="tab"
+                id="stepper1trigger3"
+                aria-controls="test-l-3"
+              >
+                <span
+                  class="bs-stepper-circle border rounded-circle px-2 bg-light text fw-bold"
+                  >4</span
+                >
+                <span class="bs-stepper-label">Validate</span>
+              </button>
+            </div>
+          </div>
+          <div class="bs-stepper-content mt-5">
+            <form onSubmit="return false">
+              <p
+                id="error"
+                class="text-danger error m-0 mb-2 fs-6 fw-bold text-center"
+              >
+                <i class="fa-solid fa-triangle-exclamation text-danger"></i>
+                Please fill in all inputs!
+              </p>
+              <div
+                class="d-flex justify-content-start align-items-center gap-1"
+              >
+                <p
+                  id="mailExist"
+                  class="text-danger error error34 my-3 fs-6 fw-bold text-center"
+                >
+                  <i class="fa-solid fa-triangle-exclamation text-danger"></i>
+                  Account already exists!
+                </p>
+                <a
+                  onclick="loginInstead()"
+                  id="login"
+                  class="text-light error34 my-3 fs-5 fw-bold text-center"
+                  >Click to Login
+                </a>
+              </div>
+              <div
+                id="test-l-1"
+                role="tabpanel"
+                class="bs-stepper-pane"
+                aria-labelledby="stepper1trigger1"
+              >
+                <div class="form-group text-white fw-semi-bold fs-5">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    placeholder="Enter email"
+                  />
+                </div>
+                <p
+                  id="error2"
+                  class="text-danger error m-0 mb-3 fs-6 fw-bold text-center"
+                >
+                  <i class="fa-solid fa-triangle-exclamation text-danger"></i>
+                  Invalid email entered!
+                </p>
+                <button
+                  class="btn buttons text-white py-1 px-3 rounded-2 border border-black"
+                  onclick="mail()"
+                >
+                  Next
+                </button>
+              </div>
+              <div
+                id="userNamePane"
+                role="tabpanel"
+                class="bs-stepper-pane"
+                aria-labelledby="stepper1trigger2"
+              >
+                <div class="form-group mt-3 text-white fw-semi-bold fs-5">
+                  <label for="username">Username</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="username"
+                    placeholder="Enter a Username"
+                  />
+                </div>
+                <button
+                  class="btn buttons step-btn text-white py-1 px-3 rounded-2 border border-black"
+                  data-step="prev3"
+                  onclick="previous1()"
+                >
+                  Previous
+                </button>
+                <button
+                  class="btn buttons text-white py-1 px-3 rounded-2 border border-black"
+                  onclick="userName()"
+                >
+                  Next
+                </button>
+              </div>
+              <div
+                id="test-l-2"
+                role="tabpanel"
+                class="bs-stepper-pane"
+                aria-labelledby="stepper1trigger2"
+              >
+                <div class="form-group mt-3 text-white fw-semi-bold fs-5">
+                  <label for="exampleInputPassword1">Create a password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="exampleInputPassword1"
+                    placeholder="Password"
+                  />
+                  <p
+                    id="error3"
+                    class="text-danger error error34 my-3 fs-6 fw-bold text-center"
+                  >
+                    <i class="fa-solid fa-triangle-exclamation text-danger"></i>
+                    Password is too weak. <br />
+                    Must include uppercase, lowercase, symbol and at least 8
+                    characters
+                  </p>
+                  <label for="exampleInputPassword2">Confirm password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="exampleInputPassword2"
+                    placeholder="Password"
+                  />
+                  <p
+                    id="error4"
+                    class="text-danger error error34 my-3 fs-6 fw-bold text-center"
+                  >
+                    <i class="fa-solid fa-triangle-exclamation text-danger"></i>
+                    Password is too weak. <br />
+                    Must include uppercase, lowercase, symbol and at least 8
+                    characters
+                  </p>
+                  <p
+                    id="error5"
+                    class="text-danger error mt-3 mb-5 fw-bold text-center"
+                  >
+                    <i class="fa-solid fa-triangle-exclamation text-danger"></i>
+                    Password does not match
+                  </p>
+                </div>
+                <button
+                  class="btn buttons step-btn text-white py-1 px-3 rounded-2 border border-black"
+                  data-step="prev2"
+                  onclick="previous1()"
+                >
+                  Previous
+                </button>
+                <button
+                  id="lastNext"
+                  class="btn buttons text-white py-1 px-3 rounded-2 border border-black"
+                  onclick="password()"
+                >
+                  Next
+                </button>
+              </div>
+              <div
+                id="test-l-3"
+                role="tabpanel"
+                class="bs-stepper-pane text-center"
+                aria-labelledby="stepper1trigger3"
+              >
+                <div
+                  class="d-flex justify-content-start align-items-center gap-4 form-group text-white fw-semi-bold fs-5"
+                >
+                  <label for="exampleInputEmail1" class="fw-bold fs-4 m-0"
+                    >Email address:</label
+                  >
+                  <p id="usersEmail" class="m-0"></p>
+                </div>
+                <div
+                  class="d-flex justify-content-start align-items-center gap-4 form-group text-white fw-semi-bold fs-5"
+                >
+                  <label for="username" class="fw-bold fs-4 m-0"
+                    >Username:</label
+                  >
+                  <p id="usersName" class="m-0"></p>
+                </div>
+                <div
+                  class="d-flex justify-content-start gap-4 align-items-center form-group text-white fw-semi-bold fs-5"
+                >
+                  <label for="exampleInputPassword1" class="fw-bold fs-4 m-0"
+                    >Password:</label
+                  >
+                  <p id="usersPassword" class="m-0"></p>
+                </div>
+
+                <button
+                  class="btn mt-5 buttons step-btn text-white py-1 px-3 rounded-2 border border-black"
+                  data-step="prev1"
+                  onclick="previous1()"
+                >
+                  Previous
+                </button>
+                <button
+                  type="submit"
+                  class="btn mt-5 buttons text-white py-1 px-3 rounded-2 border border-black"
+                  onclick="signUp()"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center gap-3">
+          <button onclick="signIn()" class="social-btns rounded-3 px-2 py-1">
+            Google Sign In
+          </button>
+          <button onclick="gitSignIn()" class="social-btns rounded-3 px-2 py-1">
+            GitHub Sign In
+          </button>
+          <a
+            href="../LoginPage/index.html"
+            class="login2 text-light error34 my-3 fs-5 fw-bold text-center"
+            >Click to Login
+          </a>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./signUp.js"></script>
+  </body>
+</html>
