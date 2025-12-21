@@ -103,11 +103,9 @@ const password = () => {
       stepper1trigger3.style.backgroundColor = "#ec6e22";
     } else {
       error3.style.display = "block";
-      error4.style.display = "block";
       document.querySelectorAll(".error34").forEach((error34) => {
         setTimeout(() => {
           error3.style.display = "none";
-          error4.style.display = "none";
         }, 3000);
       });
     }
