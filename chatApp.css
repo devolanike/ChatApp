@@ -937,6 +937,10 @@ footer > p {
     text-align: center;
   }
 
+  .div3 {
+    gap: 45px;
+  }
+
   .sec3 .div3-text {
     width: 100%;
     padding: 1rem;
@@ -960,6 +964,11 @@ footer > p {
   }
   .div1b.OpacityScrolled {
     opacity: 0;
+  }
+   {
+  }
+  .div3-text h1::after {
+    left: 40%;
   }
 }
 
@@ -988,5 +997,8 @@ footer > p {
   .btn-enhanced {
     width: 100%;
     margin-bottom: 1rem;
+  }
+  .modern-footer h5::after {
+    left: 40%;
   }
 }
