@@ -965,13 +965,10 @@ footer > p {
   .div1b.OpacityScrolled {
     opacity: 0;
   }
-   {
-  }
   .div3-text h1::after {
     left: 40%;
   }
 }
-
 @media (max-width: 576px) {
   .sec1 {
     height: auto;

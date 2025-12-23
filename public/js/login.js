@@ -26,7 +26,7 @@ function login() {
       (user) => user.mail === userObj.mail && user.pass === userObj.pass
     );
     if (found) {
-      window.location.href = "../ChatInterface/index.html";
+      window.location.href = "../chat/index.html";
     } else {
       error2.style.display = "block";
       setTimeout(() => {
@@ -39,7 +39,7 @@ function login() {
 window.login = login;
 
 function signUp() {
-  window.location.href = "../SignUp/index.html";
+  window.location.href = "../signup/index.html";
 }
 window.signUp = signUp;
 
@@ -70,11 +70,11 @@ const logIn = () => {
       console.log(user);
       if (user) {
         setTimeout(() => {
-          window.location.href = "../ChatInterface/index.html";
+          window.location.href = "../chat/index.html";
         }, 2000);
       } else {
         setTimeout(() => {
-          window.location.href = "../SignUp/index.html";
+          window.location.href = "../signup/index.html";
         }, 2000);
       }
     })
@@ -92,11 +92,11 @@ const gitLogIn = () => {
       console.log(user);
       if (user) {
         setTimeout(() => {
-          window.location.href = "../ChatInterface/index.html";
+          window.location.href = "../chat/index.html";
         }, 2000);
       } else {
         setTimeout(() => {
-          window.location.href = "../SignUp/index.html";
+          window.location.href = "../signup/index.html";
         }, 2000);
       }
     })

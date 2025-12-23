@@ -195,11 +195,11 @@ const signIn = () => {
       console.log(user);
       if (user) {
         setTimeout(() => {
-          window.location.href = "../ChatInterface/index.html";
+          window.location.href = "../chat/index.html";
         }, 2000);
       } else {
         setTimeout(() => {
-          window.location.href = "../SignUp/index.html";
+          window.location.href = "../signup/index.html";
         }, 2000);
       }
     })
@@ -217,11 +217,11 @@ const gitSignIn = () => {
       console.log(user);
       if (user) {
         setTimeout(() => {
-          window.location.href = "../ChatInterface/index.html";
+          window.location.href = "../chat/index.html";
         }, 2000);
       } else {
         setTimeout(() => {
-          window.location.href = "../SignUp/index.html";
+          window.location.href = "../signup/index.html";
         }, 2000);
       }
     })

@@ -8,9 +8,7 @@ window.addEventListener("scroll", () => {
   });
 });
 
-const element2 = document.querySelectorAll(
-  ".div1b"
-);
+const element2 = document.querySelectorAll(".div1b");
 
 window.addEventListener("scroll", () => {
   element2.forEach((el) => {

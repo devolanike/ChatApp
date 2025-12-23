@@ -47,7 +47,7 @@ const signOuts = () => {
     .then(() => {
       console.log("User is signed out");
       setTimeout(() => {
-        window.location.href = "../LoginPage/index.html";
+        window.location.href = "../login/index.html";
       }, 1000);
     })
     .catch((error) => {
