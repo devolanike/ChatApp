@@ -1,0 +1,244 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interface</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@300;600&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/chat.css" />
+    <script
+      src="https://kit.fontawesome.com/a69f428c24.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-black">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid d-flex gap-lg-5 gap-2 hstack">
+        <a class="logo navbar-brand navbar-logo ms-2" href="#"
+          >CHATAPP<i class="fa-solid fa-comment"></i
+        ></a>
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon bg-light rounded-1"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse d-flex justify-content-center gap-md-5 gap-3"
+          id="navbarNavDropdown"
+        >
+          <div
+            class="d-flex flex-column justify-content-center align-items-center icon"
+          >
+            <i class="fa-solid fa-comment icons"></i>
+            <a class="nav-link active" aria-current="page" href="#">Chat</a>
+            <span class="tooltip">Open Chats</span>
+          </div>
+          <div
+            class="d-flex flex-column justify-content-center align-items-center icon"
+          >
+            <i class="fa-solid fa-bell icons"></i>
+            <a class="nav-link" href="#">Status</a>
+            <span class="tooltip">View Updates</span>
+          </div>
+          <div
+            class="d-flex flex-column justify-content-center align-items-center icon"
+          >
+            <i class="fa-solid fa-phone icons"></i>
+            <a class="nav-link" href="#">Calls</a>
+            <span class="tooltip">View Calls</span>
+          </div>
+          <div class="vr text-white"></div>
+          <div
+            class="d-lg-flex flex-column justify-content-center align-items-center icon d-none"
+          >
+            <i class="fa-solid fa-star icons"></i>
+            <a class="nav-link" href="#">Starred</a>
+            <span class="tooltip">Starred Messages</span>
+          </div>
+          <div
+            class="d-flex flex-column justify-content-center align-items-center icon"
+          >
+            <i class="fa-solid fa-box-archive icons"></i>
+            <a class="nav-link" href="#">Archived</a>
+            <span class="tooltip">Archived Messages</span>
+          </div>
+          <div class="vr text-white"></div>
+          <ul class="navbar-nav d-lg-block d-none">
+            <li class="nav-item dropdown">
+              <a
+                class="text-decoration-none link d-flex flex-column justify-content-center align-items-center icon"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false "
+                ><i class="fa-solid fa-user"></i>
+                Profile
+                <span class="tooltip">Profile</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Profile (photo, bio, username)</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Changing theme (dark/light mode)</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Managing notifications</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Privacy options</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a
+                class="text-decoration-none link d-flex flex-column justify-content-center align-items-center icon"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false "
+                ><i class="fa-solid fa-gear"></i>
+                Settings
+                <span class="tooltip">Settings</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Profile (photo, bio, username)</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Changing theme (dark/light mode)</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Managing notifications</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Privacy options</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <i class="fa-solid fa-bars icons fs-2 d-lg-block d-none"></i>
+      </div>
+    </nav>
+
+    <section class="">
+      <div class="chatInterface d-flex gap-1 mx-1">
+        <div
+          class="interface interface1 border-light rounded-start-3 container-lg"
+        >
+          <div class="d-flex justify-content-between align-items-center">
+            <strong class="text-light fs-4">Chat</strong>
+            <div class="d-flex gap-3 justify-content-center align-items-center">
+              <i class="fa-solid fa-pen-to-square icons icon"
+                ><span class="tooltip">New chat</span></i
+              ><i class="fa-solid fa-filter icons icon"
+                ><span class="tooltip">Filter chats by</span></i
+              >
+            </div>
+          </div>
+          <input
+            class="form-control custom-input bg-black text-light"
+            list="datalistOptions"
+            id="exampleDataList"
+            placeholder="Type to search..."
+          />
+          <datalist id="datalistOptions">
+            <option value="San Francisco"></option>
+            <option value="New York"></option>
+            <option value="Seattle"></option>
+            <option value="Los Angeles"></option>
+            <option value="Chicago"></option>
+          </datalist>
+        </div>
+        <div class="interface interface2 border-light d-lg-block d-none">
+          <div class="chatArea container-lg"></div>
+          <div
+            class="inputArea d-flex justify-content-start gap-3 align-items-center"
+          >
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="Type your message here"
+              class="inputText outline-0 px-3 m-0"
+            />
+            <div
+              class="d-flex justify-content-start align-items-center gap-4 me-2"
+            >
+              <div class="icon">
+                <i class="fa-solid fa-images m-0 p-0 icons"></i
+                ><span class="tooltips">Image</span>
+              </div>
+              <div class="icon">
+                <i class="fa-solid fa-paperclip m-0 p-0 icons"></i
+                ><span class="tooltips">Attach</span>
+              </div>
+              <div class="icon">
+                <i class="fa-solid fa-paper-plane m-0 p-0 icons"></i
+                ><span class="tooltips">Send</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="interface interface3 border-light rounded-end-3 container-lg d-lg-flex justify-content-center align-items-center d-none"
+        >
+          <div
+            class="d-flex flex-column justify-content-center align-items-center gap-3"
+          >
+            <div
+              id="displayMessage"
+              class="d-flex flex-column justify-content-center align-items-center gap-2"
+            >
+              <i class="fa-solid fa-circle-user fs-1 icons"></i>
+              <p class="text-light text-center">
+                Profiles will be displayed here
+              </p>
+            </div>
+            <div
+              class="text-light d-flex flex-column justify-content-center align-items-center fs-6"
+              id="displayProfile"
+            ></div>
+            <button
+              onclick="signOuts()"
+              class="py-2 px-4 border border-danger bg-transparent text-light rounded-4 signOut"
+            >
+              Sign out
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="../js/chat.js"></script>
+  </body>
+</html>
