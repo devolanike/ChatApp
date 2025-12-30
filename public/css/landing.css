@@ -83,9 +83,9 @@ nav {
   background-color: black;
   color: white !important;
 }
-.signUpColor {
-  color: black !important;
-}
+/* .signUpColor {
+  color: #ec6e22 !important;
+} */
 
 .bg-gradient {
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
