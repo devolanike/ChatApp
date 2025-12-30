@@ -19,8 +19,7 @@ function login() {
 
   const found = allUsers.find(
     (user) =>
-      user.mail.toLowerCase() === userObj.mail &&
-      user.pass === userObj.pass
+      user.mail.toLowerCase() === userObj.mail && user.pass === userObj.pass
   );
 
   if (found) {
