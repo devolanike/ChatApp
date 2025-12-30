@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "chatapp-c68a9",
+    "dev": "official-chat-app-7be4b"
+  },
+  "targets": {},
+  "etags": {}
+}

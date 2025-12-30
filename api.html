@@ -1,0 +1,31 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="getRes()"></button>
+  </body>
+  <script>
+    const endpoint = "https://......"; // to test if it works well.(200 OK)
+    // const getRes = async () => {
+    //    const res = await fetch(endpoint);
+    //    const data = await res.json();
+    //    console.log(data);
+    // }
+
+    const getRes = () => {
+      fetch(endpoint)
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((err) => {
+          console.log("Error:", err);
+        });
+    };
+  </script>
+</html>
